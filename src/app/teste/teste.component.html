@@ -1,0 +1,22 @@
+<p> {{stringInterpolation}} </p>
+
+<button [disabled]="isDisabled"> Botão 2 </button>
+<br>
+<button (click)="disableButton()"> Botão teste </button>
+<br>
+<label> Input teste </label>
+<input value="2" [(ngModel)]="myBindingProperty" /> <!-- faz com que o que esteja escrito dentro do input seja passado automaticamente para o código -->
+<span>{{myBindingProperty}}</span>
+
+<div style="margin: 20px; border: 3px solid black;">
+  <h1 *ngIf="showTitle" [ngStyle]="{'font-weight': 'bold', color: 'pink'}"> Isso é um teste </h1>
+  <button (click)='changeTitleDisplayStatus()'>Exibir titulo</button>
+</div>
+
+<div style="margin: 20px; border: 3px solid black;">
+  <ul>
+    <li *ngFor="let item of items" [ngClass]="item.id % 2 ? 'style-1' : 'style-2'"> {{item.description}} </li>
+    <!-- para cada item dentro da lista, irá imprimir na tela a descrição do conteudo-->
+    <!-- ngClass = para cada id da lista, se ele for par, irá ser style 1, se for impar, será style 2 -->
+  </ul>
+</div>
