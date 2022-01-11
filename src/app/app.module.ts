@@ -8,13 +8,15 @@ import { CategoryComponent } from './category/category.component';
 import { HeaderComponent } from './header/header.component';
 import { MaterialModule } from './material.module';
 import { TesteComponent } from './teste/teste.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
       CategoryComponent,
       HeaderComponent,
-      TesteComponent
+      TesteComponent,
+      FooterComponent
    ],
   imports: [
     BrowserModule,
