@@ -1,7 +1,40 @@
-<app-header></app-header>
+<div class="main-container">
 
-<h1>{{title}}</h1>
-<router-outlet></router-outlet>
+  <app-header [sidenav]="sidenav"></app-header> <!-- Faz a conexão entre as linhas do menu e  sidenav que criamos-->
+  <!--<h1>{{title}}</h1>-->
 
-<app-category></app-category>
-<app-footer></app-footer>
+  <!-- Colocando aqui uma Sidenav open & close behavior -->
+  <mat-sidenav-container>
+
+    <mat-sidenav #sidenav class="w-15p">
+
+      <mat-list>
+        <mat-list-item (click)="sidenav.toggle()">
+        <!-- esse click é para fazer com que a sidenav se feche após clicar em um item do menu-->
+          <mat-icon>home</mat-icon>
+          <span class="ml-15">
+            <a href="/"> Home </a>
+            <!-- Coloco dentro de um span para que fique alinhado com o icon-->
+          </span>
+
+
+        </mat-list-item>
+      </mat-list>
+
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+
+      <h1> Olá pessoal, essa é uma aplicação de teste para o curso de Angular da Udemy</h1>
+      <router-outlet></router-outlet>
+
+    </mat-sidenav-content>
+
+  </mat-sidenav-container>
+
+
+
+  <!-- <app-category></app-category> -->
+  <app-footer></app-footer>
+
+</div>
