@@ -1,5 +1,6 @@
 export class Category {
   public name!: string;
+  public cpf!: number;
   public guid!: string;
 }
 

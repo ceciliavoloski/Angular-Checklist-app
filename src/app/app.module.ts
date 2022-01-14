@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { MaterialModule } from './material.module';
 import { CategoryComponent } from './category/category.component';
+import { DialogComponent } from './dialog/dialog.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { CategoryComponent } from './category/category.component';
     FooterComponent,
     HomeComponent,
     CategoryComponent,
+    DialogComponent,
   ],
   imports: [
     BrowserModule,
